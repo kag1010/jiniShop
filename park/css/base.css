@@ -1,0 +1,436 @@
+@charset "utf-8";
+
+/*font + */
+@font-face {
+    font-family: 'Jost* Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Book'), url('../font/Jost400Book.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* BookItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* BookItalic'), url('../font/Jost400BookItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* Hairline';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Hairline'), url('../font/Jost100Hairline.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* HairlineItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* HairlineItalic'), url('../font/Jost100HairlineItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Thin'), url('../font/Jost200Thin.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* ThinItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* ThinItalic'), url('../font/Jost200ThinItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Light'), url('../font/Jost300Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* LightItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* LightItalic'), url('../font/Jost300LightItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Medium'), url('../font/Jost500Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* MediumItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* MediumItalic'), url('../font/Jost500MediumItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* Semi';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Semi'), url('../font/Jost600Semi.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* SemiItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* SemiItalic'), url('../font/Jost600SemiItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Bold'), url('../font/Jost700Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* BoldItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* BoldItalic'), url('../font/Jost700BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Jost* Heavy';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Heavy'), url('../font/Jost800Heavy.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* HeavyItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* HeavyItalic'), url('../font/Jost800HeavyItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Black'), url('../font/Jost900Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost* BlackItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* BlackItalic'), url('../font/Jost900BlackItalic.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/*기본태그 정의*/
+html,
+body {
+    padding: 0;
+    margin: 0;
+
+    /* 공통 폰트 설정 */
+    font-family:'Jost* Book', sans-serif;
+    font-weight:normal;
+    letter-spacing: -0.02em;
+    font-size: 62.5%;
+    font-weight: 400;
+    cursor: default;
+}
+
+/* 모바일 가로모드 폰트확대 방지 */
+body {
+    -webkit-text-size-adjust: none;
+}
+
+body,
+table,
+input,
+textarea {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/*드래그색상 정의*/
+/* ::-moz-selection { background:#263658; color:#fff; }
+::selection { background:#263658; color:#fff; } */
+
+/* for AXISJ */
+body,
+select,
+input,
+a,
+button {
+    line-height: 1;
+}
+
+/* 링크 테두리 제거 */
+a {
+    outline: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+i {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 마진과 패딩의 초기화 */
+div,
+pre,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 폰트 사이즈 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* 리스트의 스타일 제거 */
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+/* 테이블 스타일 초기화 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+table {
+    border: 0;
+    width: 100%;
+}
+
+table th {
+    word-wrap: break-word
+}
+
+table td {
+    word-wrap: break-word
+}
+
+/* 이미지 및 필드셋에서 보더 표시 초기화 */
+img,
+fieldset {
+    border: none;
+}
+
+img,
+object {
+    vertical-align: top;
+}
+
+/* 캡션 텍스트 정렬 초기화 */
+caption {
+    text-align: left;
+}
+
+/* 폼태그의 초기화 */
+select {
+    font-size: 1.2rem;
+    vertical-align: middle;
+    color: #666;
+}
+
+input {
+    outline: none;
+    vertical-align: middle;
+    border-radius: 0px 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 0;
+    appearance: none;
+    line-height: 1;
+}
+
+input::placeholder {
+    color: #ccc !important;
+    font-size: 13px !important;
+    position: relative !important;
+    /* transform: translateY(-5%) !important; */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #ccc !important;
+    font-size: 13px !important;
+    position: relative !important;
+    /* transform: translateY(0) !important; */
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #ccc !important;
+    font-size: 13px !important;
+    position: relative !important;
+    /* transform: translateY(-5%) !important; */
+}
+
+textarea {
+    font-size: 1.2rem;
+    color: #666;
+    border-radius: 0px 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="radio"] {
+    vertical-align: middle;
+}
+
+input[type=checkbox] {
+    outline: none;
+    -webkit-appearance: none;
+    /* form 요소의 디바이스 기반 스타일 초기화 */
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+    display: none;
+}
+
+/* input type number 에서 화살표 제거 */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* IE에서 비밀번호 보이기/숨기기 눈 없애기 */
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+    display: none;
+}
+
+
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+
+a:active {
+    color: #666;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+/* hidden 처리 */
+/* hr, */
+caption,
+legend {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.hide {
+    position: absolute;
+    top: -9999px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* 버튼 초기화 */
+button {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+button:focus {
+    border: 0;
+    outline: none;
+}

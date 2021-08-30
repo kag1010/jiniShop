@@ -1,0 +1,15 @@
+@import url("base.css");
+/*# sourceMappingURL=style.css.map */
+
+.header__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 22px;
+    min-width: 1200px;
+    text-align: center;
+    z-index: 50;
+    text-align: center;
+    background-color: transparent;
+}
