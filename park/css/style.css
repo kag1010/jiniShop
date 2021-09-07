@@ -1,6 +1,31 @@
 @import url("base.css");
 /*# sourceMappingURL=style.css.map */
 
+.wrap {
+    width: 100%;
+    min-width: 1200px;
+}
+
+/* 헤더 시작 */
+.header {
+    position: relative;
+}
+
+.dim {
+    display: none;
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background: #000;
+    top: 0;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.dim.on {
+    display: block
+}
+
 .header__inner {
     position: fixed;
     top: 0;
@@ -12,4 +37,333 @@
     z-index: 50;
     text-align: center;
     background-color: transparent;
+}
+
+.header__inner.on {
+    background: #fff;
+}
+
+.header__link {
+    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/logo.png?ver=210806');
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 212px;
+    height: 36px;
+    margin: 0 0 0px;
+}
+
+/*  헤더_오른쪽 아이콘 시작 */
+
+.header__list-right {
+    position: absolute;
+    top: 30px;
+    right: 156px;
+}
+
+.header__item {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    margin-left: 25px;
+    font-size: 0;
+    vertical-align: top;
+}
+
+.header__item.type-search {
+    background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_search.svg?ver=210806') no-repeat center top;
+}
+
+.header__item.type-mypage {
+    background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_mypage.svg?ver=210806') no-repeat center top;
+}
+
+.header__item.type-basket {
+    background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_basket.svg?ver=210806') no-repeat center top;
+}
+
+.header__item.header__item.type-basket .header__item-link {
+    position: relative;
+    top: 10px;
+    margin-top: -2px;
+    left: -0.5px;
+    font-size: 10px;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    color: #000
+}
+
+/* 헤더 메인 메뉴 */
+
+.header__nav {
+    padding-top: 5px;
+}
+
+.header-1__list {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.header-1__list::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.header-1__item {
+    /* display: inline-block; */
+    padding: 16px 26px 16px;
+    list-style: none;
+    vertical-align: top;
+    box-sizing: border-box;
+    float: left;
+}
+
+.header-1__link {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+    font-family: 'Jost* Light', 'notokr-regular', sans-serif;
+    color: #000 !important;
+}
+
+.header-1__link.on::before {
+    width: 100%;
+}
+
+.header-1__link::before {
+    content: '';
+    width: 0;
+    height: 0.5px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.header-1__link:first-child {
+    padding-left: 0;
+}
+
+.header-1__link:last-child {
+    padding-right: 0;
+}
+
+.header-2__list {
+    display: none;
+    position: absolute;
+    margin: 0;
+    min-height: 386px;
+    padding: 45px 0 60px 0;
+    background: #fff;
+    text-align: left;
+    z-index: 10;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.header-2__list.on {
+    display: block;
+}
+
+.header-1__item:last-child .header-2__list.on {
+    right: 3%;
+}
+
+.header-2__list::before,
+.header-2__list:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+}
+
+.header-2__list::before {
+    left: -100vw;
+}
+
+.header-2__list:after {
+    right: -100vw;
+}
+
+.header-2__item {
+    float: left;
+    margin-left: 100px;
+}
+
+.header-2__item:first-child {
+    margin-left: 0;
+}
+
+.header-2__link {
+    color: #000 !important;
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+}
+
+.header-3__list {
+    margin: 26px 0 0 0;
+    padding: 0;
+    text-align: left;
+}
+.header-3__item {
+    margin-top: 11px;
+}
+.header-3__item:first {
+    margin-top: 0;
+}
+.header-3__link {
+    font-family: 'Jost* Light', 'notokr-regular', sans-serif;
+    color: #000 !important;
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.header-3__link:hover::before {
+    width: 100%;
+}
+
+.header-3__link::before {
+    content: '';
+    width: 0;
+    height: 0.5px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+/* 본문 시작 */
+
+section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 메인 슬라이드 시작 */
+
+.slide-form {
+    overflow: hidden;
+    position: relative;
+    height: 900px;
+}
+
+.swiper-slide {
+    z-index: 0;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide__coms {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-size: cover;
+}
+
+.slider1 {
+    background: url('https://cdn.louisclub.com/static/upload/display/2021/08/24/b3fd2cad-00c9-4ceb-be5b-d2a1c3b8f1bb.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.slider2 {
+    position: relative;
+}
+
+.slider2 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.slide-form__txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1470px;
+    height: 100%;
+    z-index: 9;
+}
+
+.slide-form__txt-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-pagination {
+    width: 241px;
+    overflow: hidden;
+    color: #fff !important
+}
+
+.swiper1 .swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper1 .swiper-pagination-custom,
+.swiper1 .swiper-pagination-fraction {
+    display: none;
+}
+
+.swiper-pagination-current {
+    float: left;
+}
+
+.swiper_progress-wrap {
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -45px;
+    transition: all 4s;
+    z-index: 2;
+}
+
+.swiper_progress-wrap.on {
+    width: 90px;
+}
+
+.swiper_progress-bg {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background: #fff;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -45px;
+    z-index: 1;
 }

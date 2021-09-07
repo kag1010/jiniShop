@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-/*font + */
+/* 영문 폰트 */
+ 
 @font-face {
     font-family: 'Jost* Book';
     font-style: normal;
@@ -128,6 +129,86 @@
     src: local('Jost* BlackItalic'), url('../font/Jost900BlackItalic.woff') format('woff');
 }
 
+/* 한글 폰트 */
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'notokr-black';
+    src: url('../fonts/notosanskr-black.woff2') format('woff2'),
+      url('../fonts/notosanskr-black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'notokr-bold';
+    src: url('../fonts/notosanskr-bold.woff2') format('woff2'),
+      url('../fonts/notosanskr-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'notokr-demilight';
+    src: url('../fonts/notosanskr-demilight.woff2') format('woff2'),
+      url('../fonts/notosanskr-demilight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'notokr-light';
+    src: url('../fonts/notosanskr-light.woff2') format('woff2'),
+      url('../fonts/notosanskr-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'notokr-medium';
+    src: url('../fonts/notosanskr-medium.woff2') format('woff2'),
+      url('../fonts/notosanskr-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'notokr-regular';
+    src: url('../fonts/notosanskr-regular.woff2') format('woff2'),
+      url('../fonts/notosanskr-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'notokr-thin';
+    src: url('../fonts/notosanskr-thin.woff2') format('woff2'),
+      url('../fonts/notosanskr-thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -141,7 +222,7 @@ body {
     margin: 0;
 
     /* 공통 폰트 설정 */
-    font-family:'Jost* Book', sans-serif;
+    font-family:'Jost* Book', 'notokr-regular', sans-serif;
     font-weight:normal;
     letter-spacing: -0.02em;
     font-size: 62.5%;
@@ -379,7 +460,6 @@ input[type='password']::-ms-clear {
     display: none;
 }
 
-
 a:link {
     color: #666;
     text-decoration: none;
@@ -410,6 +490,11 @@ legend {
     line-height: 0;
     overflow: hidden;
     visibility: hidden;
+}
+
+.blind {
+    text-indent: -99999px;
+    font-size: 0;
 }
 
 .hide {

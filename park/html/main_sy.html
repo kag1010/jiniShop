@@ -12,6 +12,10 @@
     <meta content="yes" name="apple-mobile-web-app-capable" />
 
     <title>필테팀</title>
+
+    <!-- swiper_css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+
     <!-- my_css -->
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
@@ -20,19 +24,309 @@
     <div class="wrap">
         <div class="header">
 
+            <div class="dim"></div>
+
+            <!-- header_menu -->
             <div class="header__inner">
                 <div class="header__logo">
-                    <div class="logo">
-                      <a href="#" class="logo__link">
+                    <a href="#" class="header__link">
                         <h1 class="blind">louisquatorze</h1>
-                      </a>
-                    </div>
-                  </div>
-            </div>
+                    </a>
+                </div>
 
+                <div class="header__list-right">
+                    <ul class="header__list">
+                        <li class="header__item type-search">
+                            <a href="#" class="header__item-link">search</a>
+                        </li>
+                        <li class="header__item type-mypage">
+                            <a href="#" class="header__item-link">mypage</a>
+                        </li>
+                        <li class="header__item type-basket">
+                            <a href="#" class="header__item-link">3</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="header__nav">
+                    <ul class="header-1__list">
+                        <li class="header-1__item"><a href="#" class="header-1__link">NEW</a></li>
+                        <li class="header-1__item"><a href="#" class="header-1__link">WOMEN</a>
+                            <ul class="header-2__list">
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">BAG</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">ALL</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">숄더백</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">토트백</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">크로스백</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">미니백/클러치백</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">백팩</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">WALLET</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">ALL</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">장지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">중지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">반지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">카드, 명함지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">멀티지갑</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-1__item"><a href="#" class="header-1__link">MEN</a>
+                            <ul class="header-2__list">
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">BAG</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">ALL</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">서류가방</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">토트백/클러치백</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">크로스백</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">WALLET</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">ALL</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">장지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">중지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">반지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">머니클립</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">카드, 명함지갑</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-1__item"><a href="#" class="header-1__link">ACC</a>
+                            <ul class="header-2__list">
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">SEASON ITEM</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">스카프</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">머플러</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">넥타이</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">우양산</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link"> BELT</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">벨트</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">서스펜더</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">ETC</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">키링</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">키지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">휴대폰케이스</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">루이까또즈 리빙</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">기타지갑</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">기타상품</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-1__item"><a href="#" class="header-1__link">OÀLC</a>
+                            <ul class="header-2__list">
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">APPAREL</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">ALL</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">모자</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">양말</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">티셔츠</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">LIFE</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">ALL</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">에그 플레이트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-1__item"><a href="#" class="header-1__link">COLLECTION</a>
+                            <ul class="header-2__list">
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">COLLECTION</a>
+                                    <a href="#" class="header-2__link">COLLABORATION</a>
+                                    <a href="#" class="header-2__link">FIND YOUR LIGHT</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-1__item"><a href="#" class="header-1__link">PLATFORM L</a>
+                            <ul class="header-2__list">
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">ALL Works</a>
+                                    <a href="#" class="header-2__link">L Edition</a>
+                                    <a href="#" class="header-2__link">Art Furniture</a>
+                                    <a href="#" class="header-2__link">Art Object</a>
+                                    <a href="#" class="header-2__link">Textile & Fashion</a>
+                                    <a href="#" class="header-2__link">Printed Matter </a>
+                                </li>
+
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">Exhibition</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-1__item"><a href="#" class="header-1__link">PROMOTION</a></li>
+                        <li class="header-1__item"><a href="#" class="header-1__link">PROJECT</a>
+                            <ul class="header-2__list">
+                                <li class="header-2__item">
+                                    <a href="#" class="header-2__link">FIND YOUR LIGHT - SPECTRUM</a>
+                                    <ul class="header-3__list">
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">ABOUT</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">연슬</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">김정섭</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">스튜디오 차차</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">김현희</a>
+                                        </li>
+                                        <li class="header-3__item">
+                                            <a href="" class="header-3__link type-all">이학민</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="section">
+            <div class="swiper1 swiper-container slide-form">
+                <div class="slide-form__txt">
+                    <div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper_progress-wrap"></div>
+                        <div class="swiper_progress-bg"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider1 swiper-slide__coms">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider2 swiper-slide__coms">
+                            <video
+                                src="https://cdn.louisclub.com/static/upload/display/2021/09/01/ad1eb514-8570-4ef2-8908-f96fee86b9d8.mp4"
+                                alt="#"
+                                poster="https://cdn.louisclub.com/static/upload/display/2021/09/01/e71d88d1-4e77-4eba-9786-5664fa32bcb0.jpg"
+                                loop="" muted="muted" playsinline="" autoplay="">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="footer">
@@ -49,6 +343,8 @@
     <!-- 필수 jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- swiper_js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
     <!-- my_js -->
     <script src="../js/common.js"></script>
 </body>
