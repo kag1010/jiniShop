@@ -1,3 +1,1030 @@
 @charset "utf-8";
 
 @import url("base.css");
+
+.wrap {
+    width: 100%;
+    min-width: 1200px;
+    font-family: 'Jost* Light', 'notokr-regular', sans-serif;
+    color: #000;
+}
+
+/* 헤더 시작 */
+
+.header {
+    position: relative;
+}
+
+.dim {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: #000;
+    top: 0;
+    opacity: 0.5;
+    z-index: 2;
+
+    &.on {
+        display: block;
+    }
+}
+
+.header__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 22px;
+    min-width: 1200px;
+    text-align: center;
+    z-index: 50;
+    text-align: center;
+    background-color: transparent;
+
+    &.on,
+    &.sticky {
+        background: #fff;
+    }
+}
+
+.header__link {
+    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/logo.png?ver=210806');
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 212px;
+    height: 36px;
+    margin: 0 0 0px;
+}
+
+/*  헤더_오른쪽 아이콘 시작 */
+
+.header__list-right {
+    position: absolute;
+    top: 30px;
+    right: 156px;
+}
+
+.header__item {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+    margin-left: 25px;
+    font-size: 0;
+    vertical-align: top;
+
+    &.type-search {
+        background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_search.svg?ver=210806') no-repeat center top;
+    }
+
+    &.type-mypage {
+        background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_mypage.svg?ver=210806') no-repeat center top;
+    }
+
+    &.type-basket {
+        background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_basket.svg?ver=210806') no-repeat center top;
+
+        .header__item-link {
+            position: relative;
+            top: 10px;
+            margin-top: -2px;
+            left: -0.5px;
+            font-size: 10px;
+            letter-spacing: -0.5px;
+            line-height: 1;
+            color: #000;
+        }
+    }
+}
+
+/* 헤더 메인 메뉴 */
+
+.header__nav {
+    padding-top: 5px;
+}
+
+.header-1__list {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+.header-1__item {
+    /* display: inline-block; */
+    padding: 16px 26px 16px;
+    list-style: none;
+    vertical-align: top;
+    box-sizing: border-box;
+    float: left;
+}
+
+.header-1__link {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+    color: #000 !important;
+
+    &.on::before {
+        width: 100%;
+    }
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 0.5px;
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s;
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.header-2__list {
+    display: none;
+    position: absolute;
+    margin: 0;
+    min-height: 386px;
+    padding: 45px 0 60px 0;
+    background: #fff;
+    text-align: left;
+    z-index: 10;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    &.on {
+        display: block;
+    }
+}
+
+.header-1__item:last-child .header-2__list.on {
+    right: 3%;
+}
+
+.header-2__list {
+
+    &::before,
+    &:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: #fff;
+        content: "";
+    }
+
+    &::before {
+        left: -100vw;
+    }
+
+    &:after {
+        right: -100vw;
+    }
+}
+
+.header-2__item {
+    float: left;
+    margin-left: 100px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &.only-tit {
+        display: block;
+        float: none;
+        margin-left: 0;
+        margin-top: 11px;
+
+        &.line-left {
+            display: inline-block;
+        }
+    }
+
+    &.line-right {
+        float: right;
+    }
+}
+
+.header-2__link {
+    color: #000 !important;
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+    font-weight: bold;
+}
+
+.header-2__item:first-child {
+    margin-top: 0;
+}
+
+.header-3__list {
+    margin: 26px 0 0 0;
+    padding: 0;
+    text-align: left;
+}
+
+.header-3__item {
+    margin-top: 11px;
+
+    &:first {
+        margin-top: 0;
+    }
+}
+
+.header-3__link {
+    color: #000 !important;
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+
+    &:hover::before {
+        width: 100%;
+    }
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 0.5px;
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s;
+    }
+}
+
+/* 본문 시작 */
+
+section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 메인 슬라이드 시작 */
+
+.slide-form {
+    overflow: hidden;
+    position: relative;
+    height: 900px;
+}
+
+.swiper1 {
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        height: 100%;
+        font-weight: 900;
+
+        &.con1 {
+            background-image: url('https://cdn.louisclub.com/static/upload/display/2021/08/24/b3fd2cad-00c9-4ceb-be5b-d2a1c3b8f1bb.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        &.con2 {
+            position: relative;
+
+            video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -1;
+            }
+        }
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .swiper-pagination-bullets {
+        bottom: 60px !important;
+    }
+
+    .swiper-pagination-bullet {
+        position: relative;
+        width: 90px;
+        height: auto;
+        text-align: left;
+        border-radius: 0;
+        opacity: 1;
+        margin-right: 20px;
+        background-color: transparent;
+
+        i {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            opacity: 0.3;
+
+            /* //progress bar 배경 */
+        }
+
+        b {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            width: 0%;
+            height: 2px;
+            background-color: #fff;
+            opacity: 1;
+
+            /* //progress bar 채워지는 부분 */
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: transparent;
+
+        b {
+            animation-name: countingBar;
+            animation-duration: 3s;
+
+            /* //autopaly 시간과 맞춰주기 */
+            animation-timing-function: ease-in;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .swiper-button-prev {
+        background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_prev_w.svg?ver=210806');
+        left: 25px;
+    }
+}
+
+.swiper-container-rtl .swiper-button-next {
+    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_prev_w.svg?ver=210806');
+    left: 25px;
+}
+
+.swiper1 .swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_next_w.svg?ver=210806');
+    right: 25px;
+}
+
+.swiper1 .swiper-button-prev,
+.swiper-button-next {
+    width: 28px;
+    height: 54px;
+    margin-top: -27px;
+    background-size: 28px 54px;
+}
+
+/* What's new 시작 */
+
+.section-inner {
+    margin-top: 120px;
+}
+
+.section-inner__wrap {
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-inner-tit {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 2.4px;
+    margin: 0 0 20px;
+    margin-bottom: 110px;
+    color: #000;
+    text-align: center;
+}
+
+.slider2-com img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider2-txt {
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+}
+
+.slider2-txt__tit {
+    margin: 0;
+    font-weight: inherit;
+    font-size: 12px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+}
+
+.slider2-txt__price {
+    margin: -4px 0 0 0;
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+    font-weight: bold;
+}
+
+.swiper-pagination.sl2 {
+    margin: 65px auto 0;
+    padding: 0;
+    position: static;
+
+    .swiper-pagination-bullet {
+        width: 30px;
+        height: 2px;
+        border-radius: 0;
+        margin: 0 3px;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #000;
+    }
+}
+
+/* 에그홀더 플레이트~ 시작 */
+
+.plate-img {
+    height: 900px;
+    background-image: url('https://cdn.louisclub.com/static/upload/display/2021/08/26/605d217f-891b-46b4-8cfc-5f21103ab2df.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* RECOMMEND GIFT 시작 */
+
+.section-inner-tit.has-list {
+    margin-bottom: 20px;
+}
+
+.slider2-txt.pl-bottom {
+    top: auto;
+
+    /* bottom: 0; */
+}
+
+.swiper3 .slider2-com {
+    padding-bottom: 17%;
+}
+
+.swiper-pagination.sl4 {
+    margin: 65px auto 0;
+    padding: 0;
+    position: static;
+
+    .swiper-pagination-bullet {
+        width: 30px;
+        height: 2px;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #000;
+    }
+}
+
+.swiper-p.list-com {
+    width: auto;
+    overflow: hidden;
+    color: #fff !important;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        font-size: 13px;
+        color: #000;
+        margin: 0 15px;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        cursor: pointer;
+
+        &.on {
+            font-weight: bold;
+        }
+    }
+}
+
+/* 중간 슬라이드 */
+
+.swiper5 {
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        background-image: url('https://cdn.louisclub.com/static/upload/display/2021/08/27/f33f0cba-6a8f-4dbc-9076-2af9186042f6.jpg');
+        height: 100%;
+        font-weight: 900;
+        background-position: center;
+        background-size: cover;
+
+        &.con2 {
+            background-image: url('https://cdn.louisclub.com/static/upload/display/2021/08/25/d5bcf8c1-608a-435a-88b9-648109a8218f.gif');
+        }
+
+        &.con3 {
+            background-image: url('https://cdn.louisclub.com/static/upload/display/2021/09/09/ad2a63d1-dbe7-4b7c-9822-0255394d78a3.jpg');
+        }
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .swiper-pagination-bullets {
+        bottom: 60px !important;
+    }
+
+    .swiper-pagination-bullet {
+        position: relative;
+        width: 90px;
+        height: auto;
+        text-align: left;
+        border-radius: 0;
+        opacity: 1;
+        margin-right: 20px;
+        background-color: transparent;
+
+        i {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            opacity: 0.3;
+
+            /* //progress bar 배경 */
+        }
+
+        b {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            width: 0%;
+            height: 2px;
+            background-color: #fff;
+            opacity: 1;
+
+            /* //progress bar 채워지는 부분 */
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: transparent;
+
+        b {
+            animation-name: countingBar;
+            animation-duration: 3s;
+
+            /* //autopaly 시간과 맞춰주기 */
+            animation-timing-function: ease-in;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .swiper-button-prev {
+        background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_prev_w.svg?ver=210806');
+        left: 25px;
+    }
+}
+
+@keyframes countingBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.swiper-container-rtl .swiper-button-next {
+    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_prev_w.svg?ver=210806');
+    left: 25px;
+}
+
+.swiper5 .swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_next_w.svg?ver=210806');
+    right: 25px;
+}
+
+.swiper5 .swiper-button-prev,
+.swiper-button-next {
+    width: 28px;
+    height: 54px;
+    margin-top: -27px;
+    background-size: 28px 54px;
+}
+
+/* consumer best */
+
+.swiper4 .slider2-com {
+    padding-bottom: 17%;
+}
+
+.swiper-pagination.sl5 {
+    margin: 65px auto 0;
+    padding: 0;
+    position: static;
+
+    .swiper-pagination-bullet {
+        width: 30px;
+        height: 2px;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #000;
+    }
+}
+
+.swiper-p2.list-com {
+    width: auto;
+    overflow: hidden;
+    color: #fff !important;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        font-size: 13px;
+        color: #000;
+        margin: 0 15px;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        cursor: pointer;
+
+        &.on {
+            font-weight: bold;
+        }
+    }
+}
+
+/* CHEESE BAG */
+
+.section-inner-subtit {
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+    margin: 0;
+    color: #000;
+    text-align: center;
+}
+
+.my360-1 {
+    width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+div {
+    &.ovvvport {
+        &.zoomin {
+
+            .orbitvu-viewer-object-canvas,
+            .ovvtiles {
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+
+        z-index: 1 !important;
+    }
+
+    &.ovvtiles {
+        z-index: 1 !important;
+    }
+}
+
+canvas.ovvtiles {
+    z-index: 1 !important;
+}
+
+div.ov-control-panel div.ovviosbuttonwrapper {
+    display: none;
+}
+
+.main-vr__btn {
+    display: block;
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 1.6px;
+    width: 94px;
+    padding: 7px 5px;
+    border: 1px solid #000;
+    line-height: 1;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* footer */
+
+.footer {
+    margin-top: 120px;
+    position: relative;
+    border-top: 1px solid #000;
+    min-width: 1200px;
+}
+
+.footer-inner {
+    padding: 45px 0;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.footer__list {
+    margin: 26px 0 0 0;
+}
+
+.footer__item {
+    display: inline-block;
+    color: #000;
+    margin-left: 18px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    a {
+        color: #000 !important;
+    }
+}
+
+.footer__link {
+    font-size: 13px;
+
+    &.type-e {
+        font-size: 14px;
+    }
+}
+
+.footer-info {
+    margin-top: 16px;
+}
+
+.footer-info__list {
+    margin-top: 8px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.footer-info__item {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    padding-left: 9px;
+    margin-left: 8px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+
+    &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 10px;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        border-left: 1px solid #000;
+        display: block;
+    }
+
+    span {
+        color: gray;
+    }
+}
+
+.footer-info__link {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    color: #000 !important;
+}
+
+.footer-sns {
+    margin-top: 20px;
+}
+
+.footer-sns__item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    list-style: none;
+    margin-left: 10px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &.type-facebook .footer-sns__link {
+        background: url('https://cdn.louisclub.com/static/fr/img/common/icon_footer_facebook.png?ver=210806') no-repeat center (center / contain);
+    }
+
+    &.type-instagram .footer-sns__link {
+        background: url('https://cdn.louisclub.com/static/fr/img/common/icon_footer_insta.png?ver=210806') no-repeat center (center / contain);
+    }
+
+    &.type-youtube .footer-sns__link {
+        background: url('https://cdn.louisclub.com/static/fr/img/common/icon_footer_youtube.png?ver=210806') no-repeat center (center / contain);
+    }
+
+    &.type-post .footer-sns__link {
+        background: url('https://cdn.louisclub.com/static/fr/img/common/icon_footer_post.png?ver=210806') no-repeat center (center / contain);
+    }
+
+    &.type-talk .footer-sns__link {
+        background: url('https://cdn.louisclub.com/static/fr/img/common/footer_talk.png?ver=210806') no-repeat center (center / contain);
+    }
+}
+
+.footer-sns__link {
+    display: block;
+    height: 100%;
+}
+
+.footer__copy {
+    margin-top: 24px;
+    font-size: 11px;
+    color: #878686;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+/* quickmenu 퀵메뉴 */
+
+.quick-menu {
+    display: none;
+    position: fixed;
+    top: 200px;
+    right: 40px;
+    z-index: 99;
+
+    &.on {
+        display: block;
+    }
+}
+
+.quick-menu__list {
+    position: relative;
+    margin: 0;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+.quick-menu__item {
+    width: 30px;
+    margin: 0;
+    padding: 14px 0;
+    list-style: none;
+}
+
+.quick-menu__link {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.quick-menu__item {
+    &.type-cart {
+        border-bottom: 1px solid #d2d2d2;
+
+        .quick-menu__link {
+            height: 25px;
+            background: url('https://cdn.louisclub.com/static/fr/img/new_common/quick/quick_cart.svg?ver=210806') no-repeat center center;
+        }
+    }
+
+    &.type-heart {
+        border-bottom: 1px solid #d2d2d2;
+
+        .quick-menu__link {
+            height: 22px;
+            background: url('https://cdn.louisclub.com/static/fr/img/new_common/quick/quick_heart.svg?ver=210806') no-repeat center center;
+        }
+    }
+
+    &.type-history {
+        border-bottom: 1px solid #d2d2d2;
+
+        .quick-menu__link {
+            height: 24px;
+            background: url('https://cdn.louisclub.com/static/fr/img/new_common/quick/quick_history.svg?ver=210806') no-repeat center center;
+        }
+    }
+}
+
+.quick-menu__num {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-size: 10px;
+    text-align: center;
+}
+
+.quick-menu__item {
+    &.type-cart .quick-menu__link .quick-menu__num {
+        line-height: 34px;
+    }
+
+    &.type-heart .quick-menu__link .quick-menu__num {
+        line-height: 24px;
+    }
+
+    &.type-history .quick-menu__link .quick-menu__num {
+        line-height: 26px;
+    }
+}
+
+.quick-menu__link.top {
+    position: relative;
+    padding-top: 15px;
+    color: #000 !important;
+
+    &::before {
+        content: "";
+        background: url('https://cdn.louisclub.com/static/fr/img/common/quick/quick_top.png?ver=210806') no-repeat center (center / contain);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 8px;
+        height: 4px;
+        margin: 0 auto;
+    }
+}
