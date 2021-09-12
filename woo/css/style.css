@@ -1,0 +1,37 @@
+@import url(base.css);
+
+.header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.logo {
+    display: inline-block;
+    width: 212px;
+    height: 36px;
+}
+
+.gnb_1depth_item {
+    color: #000;
+    display: inline-block;
+    padding: 16px 26px 16px;
+    list-style: none;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.gnb_1depth_item:first-child {
+    padding-left: 0;
+}
+.gnb_1depth_item:last-child {
+    padding-right: 0;
+}
+.gnb-right {
+    position: absolute;
+    top: 30px;
+    right: 156px;
+    
+}
+.gnb-right>i {
+    color: #000;
+    padding: 10px;
+}
