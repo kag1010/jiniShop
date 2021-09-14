@@ -41,38 +41,18 @@ $(function () {
     $(".dim").removeClass("on");
   });
 
-  // 메인 슬라이드
-  // var swiper = new Swiper('.swiper1', {
-  //   // direction: 'vertical',
-  //   // speed : 3000,
-  //   autoplay: {
-  //     delay: 5000,
-  //     disableOnInteraction: false
-  //   },
-  //   loop: true,
-  //   on: {
-  //     slideChangeTransitionStart: function () {
-  //       $('.swiper_progress-wrap').hide(0);
-  //       $('.swiper_progress-wrap').removeClass('on');
-  //     },
-  //     slideChangeTransitionEnd: function () {
-  //       $('.swiper_progress-wrap').show(0);
-  //       $('.swiper_progress-wrap').addClass('on');
-  //     },
-  //   }
-  // });
-
   var mySwiper = new Swiper('.swiper1', {
     // Optional parameters
     loop: true,
+    observer: true,
+    observeParents: true,
     autoplayDisableOnInteraction: false,
     slidesPerView: 1,
     autoHeight: true,
-    autoplay: {
-      delay: 3000,//animation과 시간 맞춰줘야함
-      disableOnInteraction: false
-    },
-
+    // autoplay: {
+    //   delay: 3000,//animation과 시간 맞춰줘야함
+    //   disableOnInteraction: false
+    // },
     pagination: {
       el: '.swiper-pagination.main',
       clickable: 'true',
@@ -93,8 +73,6 @@ $(function () {
   var swiper = new Swiper('.swiper2', {
     loop: true,
     loopFillGroupWithBlank: true,
-    slidesPerView: 3,
-    spaceBetween: 90,
     slidesPerGroup: 3,
     pagination: {
       el: '.swiper-pagination.sl2',
@@ -104,6 +82,18 @@ $(function () {
     //   delay: 2500,
     //   disableOnInteraction: false,
     // },
+    breakpointsInverse: true,
+    breakpoints: {
+      //  px 보다 클 경우
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 90
+      },
+      414: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    }
   });
 
   // RECOMMEND GIFT
@@ -159,8 +149,9 @@ $(function () {
 
   // 중간 슬라이드
   var mySwiper = new Swiper('.swiper5', {
-    // Optional parameters
     loop: true,
+    observer: true,
+    observeParents: true,
     autoplayDisableOnInteraction: false,
     slidesPerView: 1,
     autoHeight: true,

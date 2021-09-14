@@ -300,7 +300,7 @@ section {
 .swiper1 {
     .swiper-wrapper {
         width: 100%;
-        height: 100%;
+        height: 100% !important;
     }
 
     .swiper-slide {
@@ -736,6 +736,10 @@ section {
     background: #fff;
 }
 
+div.ovviosinfo {
+    display: none !important;
+}
+
 div {
     &.ovvvport {
         &.zoomin {
@@ -1027,4 +1031,205 @@ div.ov-control-panel div.ovviosbuttonwrapper {
         height: 4px;
         margin: 0 auto;
     }
+}
+
+// 반응형 시작
+
+@media screen and (max-width:1280px) {
+
+    .wrap {
+        min-width: 320px;
+    }
+
+    .header__inner {
+        min-width: 320px;
+        padding-top: 1.7187500000000002vw;
+    }
+
+    .header-1__item {
+        padding: 1.25vw 2.03125vw 1.25vw;
+    }
+
+    .header-1__link {
+        font-size: 1.015625vw;
+    }
+
+    .header__list-right {
+        top: 2.34375vw;
+        right: 12.1875vw;
+    }
+
+    .header__item {
+        width: 2.075vw;
+        height: 2.0625vw;
+        margin-left: 1.953125vw;
+
+        &.type-search {
+            background-size: contain;
+        }
+
+        &.type-mypage {
+            background-size: contain;
+        }
+
+        &.type-basket {
+            background-size: contain;
+
+            .header__item-link {
+                top: 0.88125vw;
+                margin-top: -0.15625vw;
+                left: -0.0390625vw;
+                font-size: 0.68125vw;
+                letter-spacing: -0.0390625vw;
+            }
+        }
+    }
+
+    .header-2__list {
+        min-height: 30.15625vw;
+        padding: 3.515625vw 0 4.6875vw 0;
+    }
+
+    .header-2__link {
+        font-size: 1.015625vw;
+    }
+
+    .header-3__list {
+        margin: 1.015625vw 0 0 0;
+    }
+
+    .header-3__item {
+        margin-top: 0.8593750000000001vw;
+    }
+
+    .header-3__link {
+        font-size: 1.015625vw;
+    }
+
+    .header__link {
+        width: 16.5625vw;
+        height: 2.8125vw;
+        background-size: contain;
+    }
+
+    // section 시작
+
+    .slide-form {
+        height: 70.3125vw;
+    }
+
+    .section-inner {
+        margin-top: 9.375vw;
+    }
+
+    .section-inner-tit.has-list {
+        margin-bottom: 1.5625vw;
+    }
+
+    .section-inner-tit {
+        font-size: 1.875vw;
+        margin: 0 0 1.5625vw;
+        margin-bottom: 8.59375vw;
+    }
+
+    .slider2-txt__tit {
+        font-size: 0.9375vw;
+        line-height: 1.3;
+    }
+
+    .slider2-txt__price {
+        margin: 0px 0 0 0;
+        font-size: 1.015625vw;
+    }
+
+    .swiper-p.list-com li {
+        font-size: 1.015625vw;
+    }
+
+    .swiper-p2.list-com li {
+        font-size: 1.015625vw;
+    }
+
+    .plate-img {
+        height: 70.3125vw;
+    }
+
+    .swiper3 .slider2-com {
+        padding-bottom: 7vw;
+    }
+
+    .swiper4 .slider2-com {
+        padding-bottom: 7vw;
+    }
+
+    .my360-1 {
+        width: 80%;
+    }
+
+    .section-inner-subtit {
+        font-size: 1.015625vw;
+    }
+
+    .main-vr__btn {
+        font-size: 1.171875vw;
+        width: 7.34375vw;
+        padding: 0.546875vw 0.390625vw;
+    }
+
+    .footer {
+        min-width: 320px;
+    }
+
+    .footer-inner {
+        padding: 3.515625vw 0;
+    }
+
+    .footer__list {
+        margin: 2.03125vw 0 0 0;
+    }
+
+    .footer__item {
+        margin-left: 1.40625vw;
+    }
+
+    .footer__logo {
+        width: 17.8125vw;
+    }
+
+    .footer__link {
+        font-size: 1.015625vw;
+
+        &.type-e {
+            font-size: 1.09375vw;
+        }
+    }
+
+    .footer-info__item {
+        font-size: 0.9375vw;
+        padding-left: 0.703125vw;
+        margin-left: 0.625vw;
+    
+        &::before {
+            height: 50%;
+            top: 20%;
+        }
+    }
+
+    .footer-info {
+        margin-top: 1.25vw;
+    }
+    
+    .footer-info__list {
+        margin-top: 0.625vw;
+    }
+
+    .footer-sns__item {
+        margin-left: 0.78125vw;
+    }
+
+    .footer__copy {
+        margin-top: 1.875vw;
+        font-size: 0.8593750000000001vw;
+    }
+
 }
