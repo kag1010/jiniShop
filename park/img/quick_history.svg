@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.438" height="24" viewBox="0 0 28.438 24">
+  <g id="원" transform="translate(-1858.017 -498)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1860.1 498)" fill="none" stroke="#000" stroke-width="1">
+      <ellipse cx="11.95" cy="12" rx="11.95" ry="12" stroke="none"/>
+      <ellipse cx="11.95" cy="12" rx="11.45" ry="11.5" fill="none"/>
+    </g>
+    <path id="사각형_1" data-name="사각형 1" d="M1864.456,508.286l-3.219,3.232-3.219-3.232"/>
+    <path id="사각형_1-2" data-name="사각형 1" d="M1864.456,511.518l-3.219-3.233-3.219,3.233" transform="translate(22)"/>
+  </g>
+</svg>

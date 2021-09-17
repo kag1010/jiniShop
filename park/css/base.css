@@ -133,56 +133,56 @@
   
   @font-face {
     font-family: 'notokr-black';
-    src: url('../fonts/notosanskr-black.woff2') format('woff2'),
-      url('../fonts/notosanskr-black.woff') format('woff');
+    src: url('../font/notosanskr-black.woff2') format('woff2'),
+      url('../font/notosanskr-black.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'notokr-bold';
-    src: url('../fonts/notosanskr-bold.woff2') format('woff2'),
-      url('../fonts/notosanskr-bold.woff') format('woff');
+    src: url('../font/notosanskr-bold.woff2') format('woff2'),
+      url('../font/notosanskr-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'notokr-demilight';
-    src: url('../fonts/notosanskr-demilight.woff2') format('woff2'),
-      url('../fonts/notosanskr-demilight.woff') format('woff');
+    src: url('../font/notosanskr-demilight.woff2') format('woff2'),
+      url('../font/notosanskr-demilight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'notokr-light';
-    src: url('../fonts/notosanskr-light.woff2') format('woff2'),
-      url('../fonts/notosanskr-light.woff') format('woff');
+    src: url('../font/notosanskr-light.woff2') format('woff2'),
+      url('../font/notosanskr-light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'notokr-medium';
-    src: url('../fonts/notosanskr-medium.woff2') format('woff2'),
-      url('../fonts/notosanskr-medium.woff') format('woff');
+    src: url('../font/notosanskr-medium.woff2') format('woff2'),
+      url('../font/notosanskr-medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'notokr-regular';
-    src: url('../fonts/notosanskr-regular.woff2') format('woff2'),
-      url('../fonts/notosanskr-regular.woff') format('woff');
+    src: url('../font/notosanskr-regular.woff2') format('woff2'),
+      url('../font/notosanskr-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'notokr-thin';
-    src: url('../fonts/notosanskr-thin.woff2') format('woff2'),
-      url('../fonts/notosanskr-thin.woff') format('woff');
+    src: url('../font/notosanskr-thin.woff2') format('woff2'),
+      url('../font/notosanskr-thin.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }

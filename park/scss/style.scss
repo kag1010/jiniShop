@@ -49,7 +49,7 @@
 }
 
 .header__link {
-    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/logo.png?ver=210806');
+    background-image: url('../img/logo.jpg');
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -77,15 +77,15 @@
     vertical-align: top;
 
     &.type-search {
-        background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_search.svg?ver=210806') no-repeat center top;
+        background: url('../img/icon_search.svg') no-repeat center top;
     }
 
     &.type-mypage {
-        background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_mypage.svg?ver=210806') no-repeat center top;
+        background: url('../img/icon_mypage.svg') no-repeat center top;
     }
 
     &.type-basket {
-        background: url('https://cdn.louisclub.com/static/fr/img/new_common/icon_basket.svg?ver=210806') no-repeat center top;
+        background: url('../img/icon_basket.svg') no-repeat center top;
 
         .header__item-link {
             position: relative;
@@ -281,6 +281,66 @@
     }
 }
 
+/* 헤더 모바일 메뉴 시작 */
+
+.header__nav-m {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    width: 18px;
+    height: 14px;
+    margin: 17px auto;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 50;
+    cursor: pointer;
+
+    .menu-open {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            height: 0px;
+            width: 100%;
+            border-top: 1px solid #000;
+            margin: auto;
+            transition: all linear 0.2s;
+            font-size: 0;
+        }
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            border-top: 1px solid #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all linear 0.2s;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            border-top: 1px solid #000;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: all linear 0.2s;
+        }
+    }
+}
+
+
 /* 본문 시작 */
 
 section {
@@ -306,9 +366,10 @@ section {
     .swiper-slide {
         height: 100%;
         font-weight: 900;
+        overflow: hidden;
 
         &.con1 {
-            background-image: url('https://cdn.louisclub.com/static/upload/display/2021/08/24/b3fd2cad-00c9-4ceb-be5b-d2a1c3b8f1bb.jpg');
+            background-image: url('../img/main_slide_img.jpg');
             background-position: center;
             background-size: cover;
         }
@@ -326,6 +387,14 @@ section {
                 width: auto;
                 height: auto;
                 z-index: -1;
+
+                &.pc-ver {
+                    display: block;
+                }
+
+                &.m-ver {
+                    display: none;
+                }
             }
         }
     }
@@ -392,19 +461,19 @@ section {
     }
 
     .swiper-button-prev {
-        background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_prev_w.svg?ver=210806');
+        background-image: url('../img/slide_prev.svg');
         left: 25px;
     }
 }
 
 .swiper-container-rtl .swiper-button-next {
-    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_prev_w.svg?ver=210806');
+    background-image: url('../img/slide_prev.svg');
     left: 25px;
 }
 
 .swiper1 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_next_w.svg?ver=210806');
+    background-image: url('../img/slide_next.svg');
     right: 25px;
 }
 
@@ -420,6 +489,10 @@ section {
 
 .section-inner {
     margin-top: 120px;
+
+    &.m-design-ver {
+        display: none;
+    }
 }
 
 .section-inner__wrap {
@@ -490,7 +563,7 @@ section {
 
 .plate-img {
     height: 900px;
-    background-image: url('https://cdn.louisclub.com/static/upload/display/2021/08/26/605d217f-891b-46b4-8cfc-5f21103ab2df.jpg');
+    background-image: url('../img/plate_img.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -561,18 +634,18 @@ section {
     }
 
     .swiper-slide {
-        background-image: url('https://cdn.louisclub.com/static/upload/display/2021/08/27/f33f0cba-6a8f-4dbc-9076-2af9186042f6.jpg');
+        background-image: url('../img/swiper5_1.jpg');
         height: 100%;
         font-weight: 900;
         background-position: center;
         background-size: cover;
 
         &.con2 {
-            background-image: url('https://cdn.louisclub.com/static/upload/display/2021/08/25/d5bcf8c1-608a-435a-88b9-648109a8218f.gif');
+            background-image: url('../img/swiper5_2.gif');
         }
 
         &.con3 {
-            background-image: url('https://cdn.louisclub.com/static/upload/display/2021/09/09/ad2a63d1-dbe7-4b7c-9822-0255394d78a3.jpg');
+            background-image: url('../img/swiper5_3.jpg');
         }
     }
 
@@ -638,7 +711,7 @@ section {
     }
 
     .swiper-button-prev {
-        background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_prev_w.svg?ver=210806');
+        background-image: url('../img/slide_prev.svg');
         left: 25px;
     }
 }
@@ -654,13 +727,13 @@ section {
 }
 
 .swiper-container-rtl .swiper-button-next {
-    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_prev_w.svg?ver=210806');
+    background-image: url('../img/slide_prev.svg');
     left: 25px;
 }
 
 .swiper5 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-    background-image: url('https://cdn.louisclub.com/static/fr/img/new_common/slide_next_w.svg?ver=210806');
+    background-image: url('../img/slide_next.svg');
     right: 25px;
 }
 
@@ -730,41 +803,13 @@ section {
     text-align: center;
 }
 
-.my360-1 {
-    width: 1000px;
+.cheese-img {
+    width: 700px;
     margin: 0 auto;
-    background: #fff;
-}
 
-div.ovviosinfo {
-    display: none !important;
-}
-
-div {
-    &.ovvvport {
-        &.zoomin {
-
-            .orbitvu-viewer-object-canvas,
-            .ovvtiles {
-                transform: none !important;
-                transition: none !important;
-            }
-        }
-
-        z-index: 1 !important;
+    img {
+        width: 100%;
     }
-
-    &.ovvtiles {
-        z-index: 1 !important;
-    }
-}
-
-canvas.ovvtiles {
-    z-index: 1 !important;
-}
-
-div.ov-control-panel div.ovviosbuttonwrapper {
-    display: none;
 }
 
 .main-vr__btn {
@@ -894,23 +939,23 @@ div.ov-control-panel div.ovviosbuttonwrapper {
     }
 
     &.type-facebook .footer-sns__link {
-        background: url('https://cdn.louisclub.com/static/fr/img/common/icon_footer_facebook.png?ver=210806') no-repeat center (center / contain);
+        background: url('../img/icon_footer_facebook.jpg') no-repeat center (center / contain);
     }
 
     &.type-instagram .footer-sns__link {
-        background: url('https://cdn.louisclub.com/static/fr/img/common/icon_footer_insta.png?ver=210806') no-repeat center (center / contain);
+        background: url('../img/icon_footer_insta.jpg') no-repeat center (center / contain);
     }
 
     &.type-youtube .footer-sns__link {
-        background: url('https://cdn.louisclub.com/static/fr/img/common/icon_footer_youtube.png?ver=210806') no-repeat center (center / contain);
+        background: url('../img/icon_footer_youtube.jpg') no-repeat center (center / contain);
     }
 
     &.type-post .footer-sns__link {
-        background: url('https://cdn.louisclub.com/static/fr/img/common/icon_footer_post.png?ver=210806') no-repeat center (center / contain);
+        background: url('../img/icon_footer_post.jpg') no-repeat center (center / contain);
     }
 
     &.type-talk .footer-sns__link {
-        background: url('https://cdn.louisclub.com/static/fr/img/common/footer_talk.png?ver=210806') no-repeat center (center / contain);
+        background: url('../img/footer_talk.jpg') no-repeat center (center / contain);
     }
 }
 
@@ -967,7 +1012,7 @@ div.ov-control-panel div.ovviosbuttonwrapper {
 
         .quick-menu__link {
             height: 25px;
-            background: url('https://cdn.louisclub.com/static/fr/img/new_common/quick/quick_cart.svg?ver=210806') no-repeat center center;
+            background: url('../img/quick_cart.svg') no-repeat center center;
         }
     }
 
@@ -976,7 +1021,7 @@ div.ov-control-panel div.ovviosbuttonwrapper {
 
         .quick-menu__link {
             height: 22px;
-            background: url('https://cdn.louisclub.com/static/fr/img/new_common/quick/quick_heart.svg?ver=210806') no-repeat center center;
+            background: url('../img/quick_heart.svg') no-repeat center center;
         }
     }
 
@@ -985,7 +1030,7 @@ div.ov-control-panel div.ovviosbuttonwrapper {
 
         .quick-menu__link {
             height: 24px;
-            background: url('https://cdn.louisclub.com/static/fr/img/new_common/quick/quick_history.svg?ver=210806') no-repeat center center;
+            background: url('../img/quick_history.svg') no-repeat center center;
         }
     }
 }
@@ -1022,7 +1067,7 @@ div.ov-control-panel div.ovviosbuttonwrapper {
 
     &::before {
         content: "";
-        background: url('https://cdn.louisclub.com/static/fr/img/common/quick/quick_top.png?ver=210806') no-repeat center (center / contain);
+        background: url('../img/quick_top.jpg') no-repeat center (center / contain);
         position: absolute;
         top: 0;
         left: 0;
@@ -1076,10 +1121,9 @@ div.ov-control-panel div.ovviosbuttonwrapper {
             background-size: contain;
 
             .header__item-link {
-                top: 0.88125vw;
+                top: 1vw;
                 margin-top: -0.15625vw;
                 left: -0.0390625vw;
-                font-size: 0.68125vw;
                 letter-spacing: -0.0390625vw;
             }
         }
@@ -1162,10 +1206,6 @@ div.ov-control-panel div.ovviosbuttonwrapper {
         padding-bottom: 7vw;
     }
 
-    .my360-1 {
-        width: 80%;
-    }
-
     .section-inner-subtit {
         font-size: 1.015625vw;
     }
@@ -1208,7 +1248,7 @@ div.ov-control-panel div.ovviosbuttonwrapper {
         font-size: 0.9375vw;
         padding-left: 0.703125vw;
         margin-left: 0.625vw;
-    
+
         &::before {
             height: 50%;
             top: 20%;
@@ -1218,7 +1258,7 @@ div.ov-control-panel div.ovviosbuttonwrapper {
     .footer-info {
         margin-top: 1.25vw;
     }
-    
+
     .footer-info__list {
         margin-top: 0.625vw;
     }
@@ -1230,6 +1270,396 @@ div.ov-control-panel div.ovviosbuttonwrapper {
     .footer__copy {
         margin-top: 1.875vw;
         font-size: 0.8593750000000001vw;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .header__inner {
+        padding-top: 0;
+        height: 0;
+        max-height: 45px;
+        transition: all 0.5s;
+
+        &.on,
+        &.sticky {
+            background: #fff;
+            height: 100%;
+        }
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__item {
+        width: 17px;
+        height: 17px;
+        margin-left: 10px;
+        margin-top: 1px;
+
+        &.type-mypage {
+            display: none;
+        }
+
+        &.type-basket {
+            width: 14px;
+            height: 17px;
+            margin-top: 0;
+
+            .header__item-link {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                font-size: 10px;
+                color: #000;
+                font-weight: 500;
+                text-align: center;
+                letter-spacing: -1px;
+                padding-right: 1px;
+                line-height: 12px;
+            }
+        }
+    }
+
+    .header__list-right {
+        top: 13px;
+        right: 20px;
+    }
+
+    .header__link {
+        width: 156px;
+        height: 25px;
+        margin: 10px auto;
+    }
+
+    // section 시작
+
+    .slide-form {
+        height: 100vh;
+    }
+
+    .swiper1 {
+        .swiper-slide {
+
+            &.con1 {
+                background-image: url('../img/main_slide_img_m.jpg');
+            }
+
+            &.con2 {
+                video {
+                    &.pc-ver {
+                        display: none;
+                    }
+
+                    &.m-ver {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 40px;
+        }
+    }
+
+    .swiper1 .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .section-inner__wrap {
+        position: relative;
+    }
+
+    .section-inner-tit {
+        position: absolute;
+        top: 10%;
+        z-index: 9;
+        text-align: center;
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .section-inner-tit.has-list {
+        position: static;
+    }
+
+    .section-inner {
+        margin-top: 40px;
+
+        &.m-ver {
+            margin-top: 0;
+        }
+
+        &.m-design-ver {
+            display: block;
+            border-top: 1px solid #cacaca;
+            border-bottom: 1px solid #cacaca;
+            padding: 50px 20px;
+        }
+    }
+
+    .section-inner-subtit {
+        font-size: 12px;
+
+        &.m-design-ver {
+            margin-top: 25px;
+        }
+    }
+
+    .swiper-pagination.sl2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10%;
+        height: 3px;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 0;
+        z-index: 10;
+        text-align: center;
+    }
+
+    .swiper-pagination.sl2 .swiper-pagination-bullet {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        margin: 0 3px;
+    }
+
+    .plate-img {
+        height: 166.66666666666669vw;
+        background-image: url('../img/plate_img_m.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .swiper-p.list-com li {
+        font-size: 11px;
+    }
+
+    .swiper3 .slider2-com {
+        padding-bottom: 20%;
+    }
+
+    .swiper-pagination.sl4 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2%;
+        height: 3px;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 0;
+        z-index: 10;
+        text-align: center;
+    }
+
+    .swiper-pagination.sl4 .swiper-pagination-bullet {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        margin: 0 3px;
+    }
+
+    .swiper5 {
+        &.slide-form {
+            height: 113.75vw;
+        }
+
+        .swiper-pagination-bullets {
+            bottom: 10% !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 40px;
+        }
+
+        .swiper-button-prev {
+            background-image: url('../img/slide_prev.svg');
+            left: 25px;
+        }
+    }
+
+    .swiper5 .swiper-button-prev,
+    .swiper-button-next {
+        width: 8px;
+        height: 14px;
+        margin-top: -7px;
+        background-size: 8px 14px;
+    }
+
+    .swiper4 .slider2-com {
+        padding-bottom: 20%;
+    }
+
+    .swiper-pagination.sl5 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2%;
+        height: 3px;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 0;
+        z-index: 10;
+        text-align: center;
+    }
+
+    .swiper-pagination.sl5 .swiper-pagination-bullet {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        margin: 0 3px;
+    }
+
+    .cheese-img {
+        width: 100%;
+    }
+
+    .main-vr__btn {
+        font-size: 10px;
+        width: 42px;
+        padding: 1% 0;
+        border: none;
+        border-bottom: 1px solid #000 !important;
+        display: block;
+        margin: 0 auto;
+
+        &.m-design-ver {
+            margin-top: 40px;
+        }
+    }
+
+    /* footer */
+
+    .footer {
+        margin-top: 40px;
+        border-top: none;
+        background: #f5f5f2;
+    }
+
+    .footer-inner {
+        width: 300px;
+        padding: 30px 0;
+    }
+
+    .footer__list {
+        margin: 20px 0 0 0;
+        line-height: 1.8;
+    }
+
+    .footer__item {
+        margin-left: 10px;
+    }
+
+    .footer__link {
+        font-size: 11px;
+
+        &.type-e {
+            font-size: 12px;
+        }
+    }
+
+    .footer-info {
+        margin-top: 20px;
+    }
+
+    .footer-info__list {
+        margin-top: 16px;
+    }
+
+    .footer__logo {
+        width: 152px;
+    }
+
+    .footer-info__item {
+        font-size: 10px;
+        color: #9e9e9e;
+        padding-left: 9px;
+        margin-left: 8px;
+
+        &::before {
+            display: none;
+        }
+
+        &.m-ver {
+            &::before {
+                content: "";
+                width: 0;
+                height: 8px;
+                position: absolute;
+                top: 4px;
+                left: 0;
+                border-left: 1px solid #9e9e9e;
+                display: block;
+            }
+        }
+    }
+
+    .footer-info__link {
+        display: inline-block;
+        border-bottom: 1px solid #000;
+        color: #000 !important;
+    }
+
+    .footer__copy {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+
+    .quick-menu {
+        top: auto;
+        right: 20px;
+        bottom: 60px;
+    }
+
+    .quick-menu__item {
+        &.type-cart {
+            display: none;
+        }
+
+        &.type-heart {
+            display: none;
+        }
+
+        &.type-history {
+            border-bottom: none;
+
+            .quick-menu__link {
+                background:none;
+                background-image: url('../img/m-history.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+
+    .quick-menu__num {
+        color:#9b192f;
+    }
+
+    .quick-menu__link.top {
+        font-size: 0;
+
+        &::before {
+            content: "";
+            background: url('../img/m-top.png') no-repeat center (center / contain);
+            width: auto;
+            height: 24px;
+        }
+    }
+
+    .quick-menu__item {
+        padding: 10px 0;
     }
 
 }
