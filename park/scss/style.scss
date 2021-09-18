@@ -295,6 +295,7 @@
     box-sizing: border-box;
     z-index: 50;
     cursor: pointer;
+    display: none;
 
     .menu-open {
         position: relative;
@@ -1078,6 +1079,146 @@ section {
     }
 }
 
+// 모바일용 메뉴
+
+.header__inner--m {
+    position: relative;
+    display: none;
+
+    .panel-left {
+        width: 85%;
+        height: 100%;
+        position: fixed;
+        top: 45px;
+        height: 100%;
+        left: -100%;
+        background-color: #fff;
+        z-index: 9999;
+        transition: all 0.5s;
+
+        &.on {
+            left: 0;
+        }
+
+        .panel-list {
+            height: 100%;
+            overflow: auto;
+            padding: 15px 20px 40px;
+
+            .panel-item {
+                position: relative;
+
+                .panel-link {
+                    display: table-cell;
+                    width: 1%;
+                    height: 50px;
+                    padding-right: 15px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    vertical-align: middle;
+                    box-sizing: border-box;
+                    color: #000 !important;
+                    font-weight: bold;
+
+                    &.panel3-open {
+                        position: relative;
+
+                        &::before {
+                            display: block;
+                            position: absolute;
+                            top: 20px;
+                            right: 0;
+                            width: 9px;
+                            height: 9px;
+                            background: url('../img/m-nav-down.png') no-repeat center center /contain;
+                            content: "";
+                        }
+
+                        &.on {
+                            position: relative;
+
+                            &::before {
+                                display: block;
+                                position: absolute;
+                                top: 20px;
+                                right: 0;
+                                width: 9px;
+                                height: 9px;
+                                background: url('../img/m-nav-up.png') no-repeat center center /contain;
+                                content: "";
+                            }
+                        }
+                    }
+                }
+
+                .panel-link-img {
+                    box-sizing: border-box;
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    padding: 20px 0;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .panel2-list {
+                    display: none;
+
+                    &.on {
+                        display: block;
+                        padding-bottom: 30px;
+                    }
+
+                    .panel2-item {
+                        .panel2-link {
+                            display: table-cell;
+                            width: 1%;
+                            height: 30px;
+                            font-size: 13px;
+                            padding-left: 10px;
+                            text-transform: uppercase;
+                            vertical-align: middle;
+                            box-sizing: border-box;
+                            color: #000 !important;
+                        }
+
+                        .panel3-list {
+                            width: 100%;
+                            .panel3-item {
+                                .panel3-link {
+                                    display: table-cell;
+                                    width: 1%;
+                                    height: 20px;
+                                    font-size: 12px;
+                                    padding-left: 15px;
+                                    text-transform: uppercase;
+                                    vertical-align: middle;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: -10%;
+    width: 16px;
+    height: 16px;
+    background: url(../img/m-close.png) no-repeat center center/contain;
+    text-decoration: none;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+
+
 // 반응형 시작
 
 @media screen and (max-width:1280px) {
@@ -1319,7 +1460,7 @@ section {
                 text-align: center;
                 letter-spacing: -1px;
                 padding-right: 1px;
-                line-height: 12px;
+                line-height: 16px;
             }
         }
     }
@@ -1634,7 +1775,7 @@ section {
             border-bottom: none;
 
             .quick-menu__link {
-                background:none;
+                background: none;
                 background-image: url('../img/m-history.png');
                 background-repeat: no-repeat;
                 background-position: center;
@@ -1644,7 +1785,7 @@ section {
     }
 
     .quick-menu__num {
-        color:#9b192f;
+        color: #9b192f;
     }
 
     .quick-menu__link.top {
@@ -1660,6 +1801,14 @@ section {
 
     .quick-menu__item {
         padding: 10px 0;
+    }
+
+    // 모바일 메뉴
+    .header__nav-m {
+        display: block;
+    }
+    .header__inner--m {
+        display: block;
     }
 
 }

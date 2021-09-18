@@ -498,3 +498,9 @@ button:focus {
     border: 0;
     outline: none;
 }
+
+.hidden {
+    overflow: hidden !important;
+    -ms-touch-action: none !important;
+    touch-action: none !important;
+}
