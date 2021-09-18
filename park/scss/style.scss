@@ -1101,7 +1101,7 @@ section {
         }
 
         .panel-list {
-            height: 100%;
+            height: 93%;
             overflow: auto;
             padding: 15px 20px 40px;
 
@@ -1532,6 +1532,18 @@ section {
         position: static;
     }
 
+    .slider2-txt {
+        top: 75%;
+    }
+
+    .slider2-txt__tit {
+        font-size: 12px;
+    }
+
+    .slider2-txt__price {
+        font-size: 11px;
+    }
+
     .section-inner {
         margin-top: 40px;
 
@@ -1586,6 +1598,10 @@ section {
         font-size: 11px;
     }
 
+    .swiper-p2.list-com li {
+        font-size: 11px;
+    }
+
     .swiper3 .slider2-com {
         padding-bottom: 20%;
     }
@@ -1594,7 +1610,7 @@ section {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 2%;
+        bottom: 0%;
         height: 3px;
         margin: 0 auto;
         padding: 0;
@@ -1645,7 +1661,7 @@ section {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 2%;
+        bottom: 0%;
         height: 3px;
         margin: 0 auto;
         padding: 0;
@@ -1667,12 +1683,13 @@ section {
 
     .main-vr__btn {
         font-size: 10px;
-        width: 42px;
+        width: 36px;
         padding: 1% 0;
         border: none;
         border-bottom: 1px solid #000 !important;
         display: block;
         margin: 0 auto;
+        color:#000!important;
 
         &.m-design-ver {
             margin-top: 40px;
